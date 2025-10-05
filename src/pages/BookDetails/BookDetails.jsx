@@ -6,7 +6,7 @@ const BookDetails = () => {
     const allBooks = useLoaderData()
     //  console.log(allBooks);
     const {id} = useParams()
-    const bookData = allBooks.find(book => book.bookId === parseInt(id))
+    const bookData = allBooks?.find(book => book.bookId === parseInt(id))
     console.log(bookData);
 
     const {bookName, image} = bookData;

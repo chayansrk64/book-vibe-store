@@ -21,6 +21,7 @@ const addStoredDB = (id) => {
         storedBookData.push(id)
         const data = JSON.stringify(storedBookData)
         localStorage.setItem('readList', data)
+        alert('Book Added To the Read List')
     }
 
 }
