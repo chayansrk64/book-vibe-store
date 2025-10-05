@@ -2,6 +2,11 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addStoredDB } from '../../utility/addToDB';
 
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+const MySwal = withReactContent(Swal)
+
 const BookDetails = () => {
     const allBooks = useLoaderData()
     //  console.log(allBooks);
@@ -18,6 +23,24 @@ const BookDetails = () => {
         // check if the id is already exist if exist then do not store and show an alert
         // if not then push the id into the array or collection
         addStoredDB(id)
+
+        Swal.fire({
+            title: "Marked as read!",
+            icon: "success",
+            draggable: true
+        });
+
+
+        // MySwal.fire({
+        // title: <p>Hello World</p>,
+        // didOpen: () => {
+        //     // `MySwal` is a subclass of `Swal` with all the same instance & static methods
+        //     MySwal.showLoading()
+        // },
+        // }).then(() => {
+        // return MySwal.fire(<p>Shorthand works too</p>)
+        // })
+
     }
      
 
