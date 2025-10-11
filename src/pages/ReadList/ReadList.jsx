@@ -40,6 +40,7 @@ const ReadList = () => {
 
   return (
         <>
+            <title>book-vibe-store-readlist</title>
             <div className="mb-20 text-end">
                 <details className="dropdown">
                 <summary className="btn m-1">Sort By: {sort ? sort : ""}</summary>
@@ -60,7 +61,7 @@ const ReadList = () => {
         <h2 className="text-xl">Read Book List</h2>
         <div className="my-10">
             {
-                readList.map(book => <div>
+                readList?.map(book => <div>
                     <div className="flex justify-between items-center border my-3 rounded-xl px-4">
                         <div className="flex items-center gap-3 py-2">
                             <img className="h-[100px]" src={book.image} alt="" />

@@ -46,6 +46,7 @@ const BookDetails = () => {
 
     return (
         <div className='my-10'>
+            <title>{bookName}</title>
             <img className='w-48' src={image} alt="" />
             <h4 className='text-3xl my-4'>{bookName}</h4>
             <div>
