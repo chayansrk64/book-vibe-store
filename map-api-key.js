@@ -1,1 +1,0 @@
-export const googleMapApiKey='AIzaSyB32CK7RhY_n0lw_ojokyTp0C3ajmXlgJA'
